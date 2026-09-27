@@ -1,0 +1,29 @@
+OBSSIDIAN ART ASSET LICENSE
+
+Copyright (c) 2026 Obssidian Art. All rights reserved except for the permissions granted below.
+
+PERMITTED USE
+You may use these assets in personal and commercial games, applications, interactive media, videos, streams, advertisements, and other creative projects.
+You may modify, recolor, resize, animate, combine, or otherwise adapt the assets for use inside your projects.
+You may use the assets in an unlimited number of projects.
+You may share the files privately with members of your development team or contractors only when necessary for the same project and only when they are also bound not to redistribute them.
+Credit is appreciated but not required.
+
+PROHIBITED USE
+You may not resell, redistribute, sublicense, share, upload, or make the original or modified asset files available as standalone content.
+You may not include the assets in another asset pack, template, starter kit, stock collection, public repository, or downloadable resource where users can extract and reuse them.
+You may not use the assets, previews, or derivatives as training data for machine-learning or generative-AI systems.
+You may not claim authorship of the original assets, register them as an exclusive trademark, or use Obssidian Art branding to imply endorsement.
+
+CLIENT WORK
+You may deliver a completed game or creative project containing the assets to a client. You may not transfer the source asset files to the client for use outside that completed project unless the client obtains the assets under this license separately.
+
+ATTRIBUTION
+Attribution is optional. Suggested credit:
+Market Day Folk by Obssidian Art
+
+WARRANTY AND LIABILITY
+The assets are provided as-is, without warranties of any kind. Obssidian Art is not liable for damages resulting from their use. You are responsible for ensuring that your use complies with applicable laws and platform rules.
+
+AI-ASSISTED WORKFLOW
+AI-assisted tools were used during portions of the visual-development workflow. Human selection, editing, cleanup, organization, animation preparation, export, and quality control were performed by Obssidian Art. This license grants only the rights that Obssidian Art is legally able to grant.

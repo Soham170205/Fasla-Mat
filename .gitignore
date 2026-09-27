@@ -1,0 +1,20 @@
+node_modules
+.env
+.env.*
+!.env.example
+server/data/leaderboard.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# Python (asset pipeline)
+__pycache__/
+*.pyc
+.venv/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
