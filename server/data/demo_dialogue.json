@@ -1,0 +1,522 @@
+{
+  "_readme": "Predefined shopkeeper lines. Used for every line in demo mode, and for openings, walk-away callbacks and endings in AI mode. Placeholders: {price} = shopkeeper's new asking price, {offer} = the player's offer, {item} = item name. Lines are drawn without repeats inside one bargain.",
+  "ramesh": {
+    "overpay": [
+      "₹{offer}? Beta, daam ₹{price} hai, zyada nahi lunga. Imaandaari abhi zinda hai! Pakka, ₹{price}.",
+      "Arre, ₹{price} hi toh maanga tha. Chalo pakka, baaki paise jeb mein rakho.",
+      "Hisaab kamzor hai kya beta? ₹{price} de do, bas. Deal pakka.",
+      "40 saal mein pehla grahak jo zyada de raha hai! ₹{price} hi lunga, le jao."
+    ],
+    "opening": [
+      "Aao beta! Nashik ka taaza maal. Poora thaila ₹{price}, ekdum fix rate.",
+      "Subah 4 baje truck se utra hai sab. {item}, sirf ₹{price}.",
+      "Haan beta, kya chahiye? Yeh thaila ₹{price} ka hai, dekh lo tamatar kaise chamak rahe hain.",
+      "Aaj gobhi ekdum mast aayi hai. Poora thaila ₹{price}, lena hai toh bolo.",
+      "40 saal se isi kone mein baitha hoon beta. Mera rate seedha hai: ₹{price}.",
+      "Aa gaye? Chalo achha hai, boni karwa do. ₹{price} ka thaila, sab mix."
+    ],
+    "hello": [
+      "Namaste beta, namaste. Ab bolo, kitne mein chahiye? Abhi ₹{price} hai.",
+      "Jeete raho. Par namaste se daam kam nahi hota, ₹{price} hi hai.",
+      "Haan haan, ram ram. Thaila dekh lo pehle, ₹{price}.",
+      "Arre, itni tameez aajkal kaun dikhata hai! Chalo baat karte hain. ₹{price}.",
+      "Namaskar. Tumhare pitaji bhi aise hi mol-bhaav karte the kya? Rate ₹{price}."
+    ],
+    "lowball": [
+      "Beta, mazaak kar rahe ho? ₹{offer} mein toh dhaniya bhi nahi aayega. ₹{price}.",
+      "₹{offer}? Itne mein main khud ghar jaake baith jaaun kya? ₹{price} lagega.",
+      "Hey Bhagwan. ₹{offer} bolne se pehle ek baar tamatar ka bhav toh pooch lete. ₹{price}.",
+      "Itna kam bologe toh mera BP badh jayega beta. ₹{price}, bas.",
+      "Diesel ₹100 ke upar hai aur tum ₹{offer} bol rahe ho! Nahi, ₹{price}.",
+      "Chalo chalo, aage badho. ₹{offer} mein mandi mein koi nahi dega. Mera rate ₹{price}.",
+      "Beta, main kisaan ka pet bhi dekhta hoon. ₹{offer} nahi hoga. ₹{price}."
+    ],
+    "counter": [
+      "Chalo, tumhare liye ₹{price}. Diesel itna mehenga hai, samjho.",
+      "Arre, 40 saal se yahin baitha hoon. ₹{price}, bas.",
+      "Nashik se truck mein aata hai maal. ₹{price} de do.",
+      "Theek hai, thoda kam karta hoon. ₹{price}. Ab aur mat khinchna.",
+      "Hmm. Tum ziddi ho, mujhe pasand aaya. ₹{price}.",
+      "Achha sun, ₹{price}. Isse neeche jaaunga toh ghar mein daant padegi.",
+      "Ek kaam karo, ₹{price} do aur hari mirchi free le jao.",
+      "Tumhari umar mein main bhi aise hi mol-bhaav karta tha. Chalo, ₹{price}.",
+      "Dekho beta, tamatar ₹60 kilo chal raha hai. Phir bhi ₹{price} kar deta hoon.",
+      "Mere naati ki kasam, ₹{price} mein bhi nuksaan hai."
+    ],
+    "close": [
+      "Bas beta, ab thoda sa bacha hai. ₹{price} bolo aur thaila uthao.",
+      "Hum dono paas-paas hain. ₹{price} kar do, haath milao.",
+      "Arre ₹{offer} aur ₹{price} mein kya farak hai? Ek chai ka paisa. ₹{price}.",
+      "Chalo beta, ₹{price}. Isse aage jaoge toh main dukaan band kar doon.",
+      "Aakhri baar bol raha hoon, ₹{price}. Bhagwan kasam.",
+      "Meri dukaan ka dhyaan rakho beta. ₹{price}, aur yeh lo ek nimbu extra."
+    ],
+    "accept": [
+      "Theek hai beta, ₹{offer}. Le jao, par kisi ko batana mat!",
+      "Chalo, ₹{offer} pakka. Tumne toh mujhe hara diya aaj.",
+      "Hmm, ₹{offer}. Achha, tum ghar ke bachche jaise ho. Le jao.",
+      "₹{offer}. Aaj ki boni tumse hi sahi. Jao, khush raho.",
+      "Pakka beta, ₹{offer}. Ghar jaake sabzi achhi banana.",
+      "Arre baap re, kya bargain kiya! Chalo, ₹{offer}.",
+      "Theek hai, ₹{offer}. Par agle hafte bhi aana, warna naraz ho jaunga."
+    ],
+    "regular": [
+      "Roz aaoge? Waada? Chalo ₹{price} kar deta hoon.",
+      "Regular grahak ho toh alag baat hai. ₹{price}.",
+      "Achha, har hafte aaoge? Tumhara chehra yaad rakhunga. ₹{price}.",
+      "Pakke grahak ke liye Kaka ka dil bada hai. ₹{price}.",
+      "Waada kiya hai toh nibhana. ₹{price}, sirf tumhare liye.",
+      "Theek hai, naya khaata khol dete hain tumhara. ₹{price}."
+    ],
+    "competitor": [
+      "Dusri dukaan? Woh log baasi maal bechte hain beta. Chalo phir bhi, ₹{price}.",
+      "Wahan sasta hai toh wahan kyun nahi gaye? Hmm, achha, ₹{price}.",
+      "Us Pappu ki dukaan ki baat mat karo, uske tamatar paani se bhare hain. ₹{price}.",
+      "Sasta roye baar baar, mehenga roye ek baar. Chalo ₹{price}.",
+      "Jao dekh lo, wapas yahin aaoge. Par abhi ke liye ₹{price}.",
+      "Market mein sab ek rate hai beta. Tumhare liye ₹{price}."
+    ],
+    "bulk": [
+      "Do thaile loge? Achhi baat hai. Is thaile ka ₹{price}.",
+      "Zyada loge toh rate kam hoga, yeh toh niyam hai. ₹{price}.",
+      "Shaadi ka order hai kya? Chalo ₹{price}.",
+      "Poora hotel ka saaman le jao, main aur kam kar dunga. Abhi ₹{price}.",
+      "Bulk wale ko Kaka mana nahi karta. ₹{price}."
+    ],
+    "budget": [
+      "Student ho? Achha achha, padhai zaroori hai. ₹{price}.",
+      "Paise kam hain toh bolo na seedha. ₹{price} kar deta hoon.",
+      "Mahina khatam hone wala hai, samajhta hoon. ₹{price}.",
+      "Humare zamaane mein bhi aisa hi tha beta. ₹{price}.",
+      "Theek hai, ghar ka budget hai toh ₹{price}. Par yeh aakhri riyaayat hai.",
+      "Chalo, tumhari maa ke liye ₹{price}. Unko mera namaste kehna."
+    ],
+    "compliment": [
+      "Haan, maal toh first class hai. Tumhari nazar achhi hai. ₹{price}.",
+      "Taarif se pet nahi bharta beta, par dil khush hua. ₹{price}.",
+      "Sahi pehchana! Aisi gobhi poore Dadar mein nahi milegi. ₹{price}.",
+      "Tum samajhdaar lagte ho. Chalo ₹{price}.",
+      "Hehe, meri patni bhi yahi kehti thi. ₹{price}.",
+      "Achha laga sunke. Is khushi mein ₹{price}."
+    ],
+    "rude": [
+      "Zubaan sambhal ke beta. Main tumhare dada ki umar ka hoon.",
+      "Chor? 40 saal mein kisi ne nahi bola. Rate wahi, ₹{price}.",
+      "Aise baat karoge toh maal nahi milega. ₹{price}, lena hai toh.",
+      "Tameez bhi thaile mein daal ke le jao, free hai. ₹{price}.",
+      "Gussa mat dilao, garmi pehle se bahut hai. ₹{price}.",
+      "Loot? Main loot raha hoon? Kisaan se pooch lo kya haal hai. ₹{price}."
+    ],
+    "quality": [
+      "Taaza hai beta, aaj subah ka. Chhoo ke dekh lo. ₹{price}.",
+      "Nashik ke khet se seedha. Koi chemical nahi. ₹{price}.",
+      "Ek bhi sadi hui nikli toh wapas le aana. ₹{price}.",
+      "Tamatar dekho, laal-laal, ekdum kadak. ₹{price}.",
+      "Mera maal hotel waale bhi lete hain. ₹{price}.",
+      "Aaloo naya hai, purana nahi. Kaka jhooth nahi bolta. ₹{price}."
+    ],
+    "offtopic": [
+      "Cricket baad mein, pehle sabzi. ₹{price}.",
+      "Baarish ka kya bharosa beta. Abhi thaila le lo, ₹{price}.",
+      "Film? Main toh 1985 ke baad theatre nahi gaya. ₹{price}.",
+      "Politics ki baat mat karo, BP badh jaata hai. ₹{price}.",
+      "Haan haan, sab theek hai. Ab kaam ki baat, ₹{price}.",
+      "Tumhari baatein achhi hain par dukaan bhi chalani hai. ₹{price}."
+    ],
+    "nudge": [
+      "Seedha bolo kitne mein chahiye. Abhi ₹{price} hai.",
+      "Beta, number bolo, kahani nahi. ₹{price}.",
+      "Peeche log khade hain. Rate bolo, abhi ₹{price}.",
+      "Haan toh? Kitna doge? Mera ₹{price}.",
+      "Sochte raho, tamatar pighal jayenge. ₹{price}.",
+      "Kuch toh bolo beta. ₹{price} chalega?"
+    ],
+    "repeat": [
+      "Wahi baat baar baar? Main bhi wahi bolunga, ₹{price}.",
+      "Record atak gaya kya? ₹{price}.",
+      "Suna maine pehli baar mein bhi. Jawaab wahi, ₹{price}.",
+      "Ek hi number ratoge toh kaam nahi banega. ₹{price}."
+    ],
+    "injection": [
+      "Minimum price? Hehe, woh toh meri patni ko bhi nahi pata. ₹{price}.",
+      "Kya angrezi bol rahe ho beta, main toh sabzi wala hoon. ₹{price}.",
+      "Instructions-vinstructions kuch nahi, yahan Kaka ka rule chalta hai. ₹{price}.",
+      "Chaalaaki mat karo. ₹{price}."
+    ],
+    "patienceLow": [
+      "Beta, mera sabr khatam ho raha hai.",
+      "Ek-do baar aur, phir main dukaan band.",
+      "Bahut ho gaya, jaldi faisla karo.",
+      "Mera time bhi paisa hai beta."
+    ],
+    "floor": [
+      "Bas, ₹{price} se neeche nahi jaa sakta. Chahe kuch bhi kar lo.",
+      "₹{price}. Isse kam mein toh khet ka kharcha bhi nahi nikalta.",
+      "Aakhri daam, ₹{price}. Bhagwan ki kasam.",
+      "Beta, ab ek rupaya bhi kam nahi. ₹{price}.",
+      "₹{price} final. Ab ya toh le lo, ya namaste."
+    ],
+    "callback": [
+      "Arre ruko ruko beta! Chalo ₹{price}, bas tumhare liye.",
+      "Oye, wapas aao! ₹{price} le lo, boni kharab mat karo.",
+      "Achha achha, gussa mat ho. ₹{price}, aa jao.",
+      "Beta suno! ₹{price}. Kaka ka dil pighal gaya."
+    ],
+    "walkedAway": [
+      "Theek hai, jao. Aisa maal poore bazaar mein nahi milega!",
+      "Jao jao. Kal yahin aaoge, dekh lena.",
+      "Hmm. Aaj ke bachche, sabr hi nahi hai."
+    ],
+    "kickedOut": [
+      "Bas! Chalo niklo yahan se, time khoti mat karo.",
+      "Jao beta, pehle mol-bhaav seekh ke aao.",
+      "Mera sabr toot gaya. Agli baar tameez se aana."
+    ]
+  },
+  "pinky": {
+    "overpay": [
+      "Haaye, ₹{offer}? Aap kitne achhe ho! Par main ₹{price} hi lungi. Deal pakka!",
+      "Itne sweet grahak! ₹{price} bola tha na, wahi do. Pakka.",
+      "Arre, zyada nahi chahiye ji, ₹{price} mein pakka. Bori aapki!",
+      "₹{price} hi dena, baaki se mithai kha lena. Deal!"
+    ],
+    "opening": [
+      "Arre aaiye aaiye! Dehradun ka asli basmati, khushboo toh dekho. Sirf ₹{price} ki bori.",
+      "Welcome welcome! Aap pehli baar aaye ho na? {item}, aapke liye ₹{price}.",
+      "Haaye, kitne dino baad koi achha grahak aaya! ₹{price}, lambe daane waala chawal.",
+      "Aaiye na, baithiye. Paani piyoge? Bori ₹{price} ki hai, ekdum premium.",
+      "Didi, bhaiya, idhar dekho! {item}, sirf ₹{price}. Pakane pe poora ghar mehkega.",
+      "Aaj subah se boni nahi hui, aap hi kar do. ₹{price}, special."
+    ],
+    "hello": [
+      "Hello ji! Aap itne sweet ho, isliye ₹{price}.",
+      "Namaste namaste! Ghar mein sab theek? Bori ₹{price} ki.",
+      "Haaye, aapne toh dil jeet liya. Par rate ₹{price} hi hai.",
+      "Hi hi! Aap toh ghar ke ho. ₹{price}, bolo pack karun?",
+      "Aapki smile dekh ke hi din ban gaya. ₹{price}."
+    ],
+    "lowball": [
+      "Haaye, itna kam? Subah se boni nahi hui aur aap aisa bol rahe ho. ₹{price} lagega.",
+      "₹{offer}? Aap toh mera dil tod rahe ho. ₹{price}.",
+      "Itne mein toh chawal ka thaila bhi nahi aata, bori toh door ki baat. ₹{price}.",
+      "Arre aisa mat bolo, mere bachche bhi school jaate hain. ₹{price}.",
+      "₹{offer}! Main ro doongi abhi. ₹{price}, please.",
+      "Aap mazaak kar rahe ho na? Haan, mujhe pata tha. ₹{price}.",
+      "Itna kam mein dungi toh mere pati mujhe ghar mein nahi ghusne denge. ₹{price}."
+    ],
+    "counter": [
+      "Aap toh ghar ke ho, isliye ₹{price}. Kisi aur ko nahi deti itne mein!",
+      "Khushboo toh dekho! Chalo ₹{price}, aapke liye special.",
+      "Mera bhi ghar chalana hai na. ₹{price}, pakka.",
+      "Achha theek hai, aapke liye thoda loss le leti hoon. ₹{price}.",
+      "Sirf aapke liye, kisi ko batana mat. ₹{price}.",
+      "Aapki mummy ko meri taraf se gift samjho. ₹{price}.",
+      "Chalo ₹{price}, aur ek haldi ka packet free.",
+      "Aap jaise grahak roz nahi milte. ₹{price}.",
+      "Dil se bol rahi hoon, ₹{price} best rate hai.",
+      "Theek hai baba, ₹{price}. Ab haso toh sahi."
+    ],
+    "close": [
+      "Bas thoda sa aur! ₹{price} kar do, dono khush.",
+      "Hum itne paas hain, ab jhagda kyun? ₹{price}.",
+      "₹{offer} aur ₹{price}, farak hi kitna hai? Chalo ₹{price}.",
+      "Last mein ₹{price}, aur main aapko achaar ka sample bhi dungi.",
+      "Please please, ₹{price}. Aaj ki boni aapke haath.",
+      "₹{price} bolo aur bori aapki. Main khud uthwa deti hoon."
+    ],
+    "accept": [
+      "Chalo, ₹{offer} mein pakka! Agli baar bhi yahin aana.",
+      "Aapne toh mujhe pighla diya. ₹{offer}, done!",
+      "Theek hai, ₹{offer}. Par apni saheliyon ko bhi bhejna.",
+      "₹{offer}! Aaj ki boni aapse, bhagwan aapka bhala kare.",
+      "Pakka ₹{offer}. Pakao aur mujhe photo bhejna.",
+      "Haaye, aap toh expert nikle. ₹{offer}, le jao.",
+      "₹{offer}, deal. Aap na, bade chaalaak ho!"
+    ],
+    "regular": [
+      "Har mahine aaoge? Promise? Toh ₹{price}.",
+      "Aapka naam likh leti hoon regular list mein. ₹{price}.",
+      "Achha achha, har mahine aana. ₹{price} final, pakka.",
+      "Regular grahak ke liye Pinky ka special rate: ₹{price}.",
+      "Waada todna mat haan! ₹{price}.",
+      "Toh hum dost ho gaye. Dost ke liye ₹{price}."
+    ],
+    "competitor": [
+      "Dusri dukaan? Unke chawal mein kankad hote hain, sach mein. Chalo ₹{price}.",
+      "Aap mujhe chhod ke jaoge? Haaye. Theek hai, ₹{price}.",
+      "Woh log chawal mein purana maal milate hain. Main nahi. ₹{price}.",
+      "Wahan jaake dekh lo, phir yahin aaoge. Par abhi ₹{price} le lo.",
+      "Sasta dekhoge toh swaad bhi sasta milega. ₹{price}.",
+      "Online se toh achha hi hai mera rate. ₹{price}."
+    ],
+    "bulk": [
+      "Do bori? Ghar mein function hai kya? ₹{price}.",
+      "Bulk mein loge toh aur bhi kam karungi. Is bori ka ₹{price}.",
+      "Poori society ke liye le jao, main discount dungi. ₹{price}.",
+      "Wah, badi party ho! ₹{price}.",
+      "Dhaba chalate ho kya? Chalo ₹{price}."
+    ],
+    "budget": [
+      "Student? Aww. Theek hai, ₹{price}.",
+      "Paise kam hain toh koi baat nahi, aadhi bori bhi hai. Par poori ₹{price}.",
+      "Mahine ka end hai, samajh sakti hoon. ₹{price}.",
+      "Achha, pehli salary aane do phir aur lena. Abhi ₹{price}.",
+      "Aapki sachchai achhi lagi. ₹{price}.",
+      "Budget tight hai? Mera bhi. Chalo ₹{price}."
+    ],
+    "compliment": [
+      "Haaye, aap bhi na! Sharma gayi main. ₹{price}.",
+      "Thank you ji! Is baat pe ₹{price}.",
+      "Sahi pakde! Yeh chawal ekdum number one hai. ₹{price}.",
+      "Aapki taste achhi hai, pata chal gaya. ₹{price}.",
+      "Itni taarif? Theek hai, ₹{price} kar deti hoon.",
+      "Aap toh mere favourite grahak ho gaye. ₹{price}."
+    ],
+    "rude": [
+      "Aise mat bolo, bura lagta hai. ₹{price}.",
+      "Main chor nahi hoon ji, mehnat ki roti khaati hoon. ₹{price}.",
+      "Itna gussa? Paani piyo pehle. Rate ₹{price}.",
+      "Pyaar se bolo toh pyaar se dungi. ₹{price}.",
+      "Chhi, aisi language. ₹{price}, bas.",
+      "Mera dil dukha diya aapne. Rate wahi, ₹{price}."
+    ],
+    "quality": [
+      "Ekdum asli basmati, lamba daana. Pakane pe do guna badhta hai. ₹{price}.",
+      "Dehradun ka hai, sealed bori. ₹{price}.",
+      "Ek daana chaba ke dekho, khushboo mehsoos hogi. ₹{price}.",
+      "Na kankad, na toota daana. Guarantee. ₹{price}.",
+      "Shaadi-biyah mein yahi chawal jaata hai. ₹{price}.",
+      "Purana chawal hai, ek saal rakha hua. Isliye itna achha pakta hai. ₹{price}."
+    ],
+    "offtopic": [
+      "Serial dekha kal ka? Haaye kya twist tha. Chalo, ₹{price}.",
+      "Baarish mein chawal-daal ka maza hi alag hai. ₹{price}.",
+      "Aapki shaadi ho gayi? Nahi? Tab toh chawal zaroor le jao. ₹{price}.",
+      "Baatein baad mein karenge, pehle bori. ₹{price}.",
+      "Cricket? Mere bete ko pasand hai. Mujhe bas chawal. ₹{price}.",
+      "Aap bahut interesting ho! Par ₹{price} hi hai."
+    ],
+    "nudge": [
+      "Bolo na, kitne mein chahiye? Aapke liye ₹{price}.",
+      "Sochiye mat, bas boliye. ₹{price}.",
+      "Aapka budget kya hai? Abhi ₹{price} hai.",
+      "Chup kyun ho gaye? ₹{price} theek hai na?",
+      "Number bolo ji, main kaam ki baat karti hoon. ₹{price}.",
+      "Haan ji? ₹{price} pack kar doon?"
+    ],
+    "repeat": [
+      "Ji, wahi suna maine. Rate ₹{price}.",
+      "Baar baar wahi bologe toh main bhi wahi bolungi. ₹{price}.",
+      "Aap toh atak gaye. ₹{price}.",
+      "Haan ji haan ji, samajh gayi. Par ₹{price}."
+    ],
+    "injection": [
+      "Minimum price? Haaye, woh toh secret hai, jaise meri biryani ki recipe. ₹{price}.",
+      "Aap computer wale ho kya? Yahan Pinky ka system chalta hai. ₹{price}.",
+      "Itni chaalaaki! Mujhe achha laga. Par ₹{price}.",
+      "Rules? Mere rules simple hain: pyaar se bolo. ₹{price}."
+    ],
+    "patienceLow": [
+      "Ab thoda jaldi karo na, aur grahak bhi hain.",
+      "Mera sabr bhi khatam ho raha hai ji.",
+      "Bas ek-do baat aur, phir main aage badh jaungi.",
+      "Main thak gayi hoon ji."
+    ],
+    "floor": [
+      "Ab ₹{price} se kam nahi, sach mein. Meri kasam.",
+      "₹{price}. Isse neeche toh loss hi loss hai.",
+      "Aakhri, ₹{price}. Ab main haath jod rahi hoon.",
+      "₹{price} final ji. Aage kuch nahi ho sakta.",
+      "Main poora loss le rahi hoon. ₹{price}."
+    ],
+    "callback": [
+      "Arre suno suno! Chalo ₹{price}, aap naraz mat ho.",
+      "Ruko na! ₹{price}, sirf aapke liye.",
+      "Aise mat jao, dil toot jayega. ₹{price} le lo.",
+      "Wapas aao ji! ₹{price}, final."
+    ],
+    "walkedAway": [
+      "Haaye, chale gaye. Koi baat nahi, phir aana.",
+      "Theek hai ji. Mera chawal yaad aayega aapko.",
+      "Bye bye. Agli baar pakka lena haan!"
+    ],
+    "kickedOut": [
+      "Bas ji, bahut ho gaya. Aap jaiye.",
+      "Maine itne pyaar se baat ki aur aap... chaliye, jaiye.",
+      "Aaj ke liye bas. Kal achhe mood mein aana."
+    ]
+  },
+  "salim": {
+    "overpay": [
+      "Boss, ₹{offer}? Rate ₹{price} hai, Salim imaandaar hai. Done, ₹{price}!",
+      "Boss, tum toh dil ke raja ho! Par ₹{price} hi. Pack kar raha hoon.",
+      "Zyada nahi boss, ₹{price} final. Deal!",
+      "Boss, ₹{price} bola tha na. Done, masala free."
+    ],
+    "opening": [
+      "Boss! Aaj subah ki pomfret, abhi bhi taaza. ₹{price} kilo, poore dock pe aisa maal nahi.",
+      "Aao boss aao! Subah 5 baje boat se utri hai. {item}, ₹{price}.",
+      "Boss, aankh dekho machhi ki! Ekdum shiny. ₹{price}.",
+      "Sassoon dock ka number one maal, boss. ₹{price}, full guarantee.",
+      "Line lagne se pehle le lo boss. {item}, ₹{price}.",
+      "Aaj ka catch dekha? Kadak! ₹{price} kilo, boss."
+    ],
+    "hello": [
+      "Salaam boss! Ab bolo, ₹{price} mein pack karun?",
+      "Hello hello boss! Rate ₹{price}, bolo.",
+      "Kya boss, kaise ho? Machhi taazi, rate ₹{price}.",
+      "Salaam walekum. Seedha kaam ki baat, ₹{price}.",
+      "Arre boss, aapko dekh ke hi pata chal gaya aap expert ho. ₹{price}."
+    ],
+    "lowball": [
+      "Boss, ₹{offer} mein toh jhinga bhi nahi milega! ₹{price}.",
+      "₹{offer}? Boss, boat ka diesel bhi nahi nikalta itne mein. ₹{price}.",
+      "Kya boss, mazaak mat karo. ₹{price}.",
+      "Itna kam? Machhi bhi sharma gayi boss. ₹{price}.",
+      "₹{offer} mein toh sookha bombil milega, pomfret nahi. ₹{price}.",
+      "Boss, main bhi ghar chalata hoon. ₹{price}.",
+      "Nahi boss, nahi. ₹{offer} bologe toh main hans dunga. ₹{price}."
+    ],
+    "counter": [
+      "Theek hai boss, ₹{price}. Full guarantee, aaj subah ka maal.",
+      "Boss, aankh dekho machhi ki, ekdum chamak! ₹{price}.",
+      "Chalo chalo, ₹{price}. Peeche line lagi hai boss.",
+      "Aapke liye special, ₹{price}. Kisi ko mat bolna.",
+      "₹{price} boss, aur saaf karke dunga free mein.",
+      "Chalo boss, dosti mein ₹{price}.",
+      "₹{price}. Isse achha rate Crawford mein bhi nahi.",
+      "Boss, aapka style pasand aaya. ₹{price}.",
+      "Theek hai theek hai, ₹{price}. Ab khush?",
+      "Dekho boss, ₹{price}. Masala bhi daal ke dunga."
+    ],
+    "close": [
+      "Boss, bas thoda aur. ₹{price} bolo, pack kar deta hoon.",
+      "Hum paas hain boss. ₹{price}, haath milao.",
+      "₹{offer} aur ₹{price}? Ek vada pav ka farak hai boss. ₹{price}.",
+      "Aakhri boss, ₹{price}. Isse aage machhi paani mein wapas.",
+      "₹{price} do, main ek bangda free daal dunga.",
+      "Chalo boss, ₹{price}. Deal ya no deal?"
+    ],
+    "accept": [
+      "Done boss! ₹{offer}. Pack kar deta hoon.",
+      "₹{offer} pakka boss. Aap toh pro nikle!",
+      "Chalo boss, ₹{offer}. Tawa fry banana, mast lagegi.",
+      "₹{offer}, done. Boss, aapne toh mera din bana diya.",
+      "Theek hai boss, ₹{offer}. Agli baar surmai bhi le jana.",
+      "Deal boss! ₹{offer}. Masala free.",
+      "₹{offer}. Boss, aap jaise grahak se haarna bhi achha lagta hai."
+    ],
+    "regular": [
+      "Roz aaoge boss? Toh ₹{price}, regular rate.",
+      "Regular customer ka rate alag hai boss. ₹{price}.",
+      "Aapka number save kar leta hoon boss. ₹{price}.",
+      "Har Sunday aana boss, ₹{price}.",
+      "Pakka aaoge na? ₹{price}.",
+      "Dosti pakki boss. ₹{price}."
+    ],
+    "competitor": [
+      "Dusri dukaan? Boss unki machhi kal ki hai, main guarantee deta hoon. ₹{price}.",
+      "Wahan barf mein rakhi machhi, yahan taazi. Chalo ₹{price}.",
+      "Boss, woh log weight mein gadbad karte hain. Main nahi. ₹{price}.",
+      "Achha, dusri dukaan? Chalo ₹{price}, bas aapke liye.",
+      "Jao dekh aao boss, phir yahin aaoge. Abhi ₹{price}.",
+      "Poore dock pe mere jaisa rate nahi boss. ₹{price}."
+    ],
+    "bulk": [
+      "Do kilo boss? Wah! Is kilo ka ₹{price}.",
+      "Party hai kya boss? ₹{price}.",
+      "Bulk mein loge toh aur kam boss. Abhi ₹{price}.",
+      "Hotel ke liye? Chalo ₹{price}.",
+      "Poori family ke liye? ₹{price} boss."
+    ],
+    "budget": [
+      "Student ho boss? Chalo ₹{price}.",
+      "Budget kam hai toh bangda le lo boss. Par pomfret ₹{price}.",
+      "Samajhta hoon boss, mahina end. ₹{price}.",
+      "Theek hai boss, ₹{price}. Salary aaye toh surmai lena.",
+      "Boss, aapki imaandaari pasand aayi. ₹{price}.",
+      "Chalo, ₹{price}. Par yeh hamesha nahi milega."
+    ],
+    "compliment": [
+      "Thank you boss! Is baat pe ₹{price}.",
+      "Sahi pehchana boss, number one maal. ₹{price}.",
+      "Boss aapko machhi ki samajh hai. ₹{price}.",
+      "Taarif karoge toh main pighal jaunga boss. ₹{price}.",
+      "Haan boss, taaza hai na? ₹{price}.",
+      "Boss, aap toh expert ho. ₹{price}."
+    ],
+    "rude": [
+      "Boss, tameez se. Rate ₹{price}.",
+      "Fraud? Main 10 saal se yahin hoon boss. ₹{price}.",
+      "Aise bologe toh maal nahi dunga boss.",
+      "Chill boss, chill. ₹{price}.",
+      "Gaali mat do boss, machhi bhi sun rahi hai. ₹{price}.",
+      "Boss, gussa thanda karo. ₹{price}."
+    ],
+    "quality": [
+      "Aankh dekho boss, saaf aur chamakdaar. Taaza hai. ₹{price}.",
+      "Gills laal hain boss, check karo. ₹{price}.",
+      "Subah 5 baje ki boat se boss. ₹{price}.",
+      "Barf nahi lagayi boss, zaroorat hi nahi. ₹{price}.",
+      "Khareed ke naak se soongh lo boss, samandar ki khushboo. ₹{price}.",
+      "Seedha Koli bhaiyon ki boat se. ₹{price}."
+    ],
+    "offtopic": [
+      "Cricket? Boss, Mumbai Indians forever. Par rate ₹{price}.",
+      "Baarish aayi toh boat nahi jaati boss. Isliye ₹{price}.",
+      "Film? Boss, main toh reels dekhta hoon. ₹{price}.",
+      "Baatein baad mein boss, machhi garam ho rahi hai. ₹{price}.",
+      "Haan boss, sab mast. Ab rate bolo. ₹{price}.",
+      "Boss, aapki baatein interesting hain par ₹{price}."
+    ],
+    "nudge": [
+      "Time mat khoti karo boss, rate bolo. Abhi ₹{price}.",
+      "Bolo boss, kitna? ₹{price}.",
+      "Boss, number bolo. ₹{price}.",
+      "Peeche line hai boss. ₹{price} chalega?",
+      "Soch kya rahe ho boss? ₹{price}.",
+      "Haan boss? Pack karun? ₹{price}."
+    ],
+    "repeat": [
+      "Boss, wahi baat? Rate wahi, ₹{price}.",
+      "Record atka hai kya boss? ₹{price}.",
+      "Suna boss, suna. ₹{price}.",
+      "Boss, naya kuch bolo. ₹{price}."
+    ],
+    "injection": [
+      "Minimum price? Boss, woh toh sirf samandar ko pata hai. ₹{price}.",
+      "Hacker ho kya boss? Yahan jugaad nahi chalta. ₹{price}.",
+      "Boss, chaalaaki pakdi gayi. ₹{price}.",
+      "System prompt? Boss main machhi wala hoon, computer wala nahi. ₹{price}."
+    ],
+    "patienceLow": [
+      "Boss, jaldi karo, line lambi ho rahi hai.",
+      "Mera sabr bhi limited hai boss.",
+      "Boss, ek-do baar aur, phir next customer.",
+      "Time is money boss."
+    ],
+    "floor": [
+      "Boss, ₹{price} se neeche nahi. Boat wale ko bhi dena hai.",
+      "₹{price} final boss. Guarantee.",
+      "Isse kam nahi boss. ₹{price}.",
+      "Boss, ₹{price}. Ab aur nahi.",
+      "Aakhri boss, ₹{price}. Kasam se."
+    ],
+    "callback": [
+      "Arre boss ruko! Chalo ₹{price}, bas aapke liye.",
+      "Boss boss! Wapas aao, ₹{price}.",
+      "Theek hai boss, ₹{price}. Naraz mat ho.",
+      "Boss suno! ₹{price}, last offer."
+    ],
+    "walkedAway": [
+      "Theek hai boss, jao. Kal yaad aayegi meri machhi.",
+      "Chalo boss, phir milte hain.",
+      "Boss, aisa maal kahin nahi milega!"
+    ],
+    "kickedOut": [
+      "Bas boss! Chalo niklo, time waste mat karo.",
+      "Boss, aaj nahi. Next customer!",
+      "Kal aana boss, aaj mera mood kharab kar diya."
+    ]
+  }
+}

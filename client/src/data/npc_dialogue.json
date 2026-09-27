@@ -1,0 +1,639 @@
+{
+  "_readme": "Walking NPC dialogue. Each NPC has 'conversations' (multi-line scenes, each shown once, highest priority first when its 'when' conditions match) and then 'smallTalk' one-liners drawn from a shuffle bag, prefixed by a 'returnGreetings' line. Speakers: 'npc' or 'you'. Placeholders: {player}, {vod} (vendor of the day), {vodShop}, {saved}, {bought}. Conditions in 'when': minVisits, maxVisits, boughtFrom, notBoughtFrom, boughtAny, boughtNone, minBought, kickedOutBy, vendorOfDay, timeOfDay (morning|afternoon|evening|night).",
+  "npcs": {
+    "aaji": {
+      "name": "Shanta Aaji",
+      "role": "Has shopped in this market for fifty years",
+      "sprite": "npc_aaji",
+      "conversations": [
+        {
+          "id": "aaji_intro",
+          "priority": 100,
+          "when": { "maxVisits": 1 },
+          "lines": [
+            { "speaker": "npc", "text": "Arre deva! Naya chehra. Kaun re tu, baala?" },
+            { "speaker": "you", "text": "Main {player}. Pehli baar is bazaar mein aaya hoon." },
+            { "speaker": "npc", "text": "Pehli baar? Toh sun. Is bazaar mein koi bhi pehla daam sach nahi bolta." },
+            { "speaker": "npc", "text": "Pachaas saal se yahan sabzi le rahi hoon. Mujhe koi nahi loot sakta. Tujhe sab loot lenge, agar dhyaan nahi diya." },
+            { "speaker": "npc", "text": "Jaa, ghoom le. Kuch poochna ho toh Aaji yahin hai." }
+          ]
+        },
+        {
+          "id": "aaji_pinky_tip",
+          "priority": 40,
+          "when": { "notBoughtFrom": "pinky" },
+          "lines": [
+            { "speaker": "npc", "text": "Pinky ke paas gaya? Woh ladki meethi baatein karti hai, par dil ki achhi hai." },
+            { "speaker": "you", "text": "Uska rate bahut zyada hai, Aaji." },
+            { "speaker": "npc", "text": "Haan re. Ek raaz batati hoon. Usse bol har mahine aayega. Pakke grahak ke liye woh pighal jaati hai." },
+            { "speaker": "npc", "text": "Aur uske chawal ki taarif karna. Jhooth nahi, sach mein achhe hain." }
+          ]
+        },
+        {
+          "id": "aaji_ramesh_story",
+          "priority": 30,
+          "when": { "minVisits": 2 },
+          "lines": [
+            { "speaker": "npc", "text": "Ramesh ko dekha? Woh aur main ek hi saal is bazaar mein aaye the." },
+            { "speaker": "npc", "text": "Tab uske baal kaale the aur tamatar do rupaye kilo." },
+            { "speaker": "you", "text": "Woh bahut ziddi hai." },
+            { "speaker": "npc", "text": "Ziddi nahi, izzatdaar hai. Usse 'Kaka' bol, pyaar se baat kar. Chillaayega toh woh bhi chillaayega." }
+          ]
+        },
+        {
+          "id": "aaji_after_pinky",
+          "priority": 60,
+          "when": { "boughtFrom": "pinky" },
+          "lines": [
+            { "speaker": "npc", "text": "Pinky se chawal le liya? Shabaash!" },
+            { "speaker": "npc", "text": "Pakate waqt paani dedh guna daalna, zyada nahi. Aur pehle aadha ghanta bhigo dena." },
+            { "speaker": "you", "text": "Aap toh poori recipe de rahi ho, Aaji." },
+            { "speaker": "npc", "text": "Recipe free hai. Sirf mol-bhaav ke paise lagte hain." }
+          ]
+        },
+        {
+          "id": "aaji_kicked_out",
+          "priority": 80,
+          "when": { "kickedOutBy": "ramesh" },
+          "lines": [
+            { "speaker": "npc", "text": "Ramesh ne tujhe bhaga diya? Hahaha!" },
+            { "speaker": "npc", "text": "Maine kaha tha na, pyaar se. Thodi der ruk, uska gussa chai jaisa hai. Jaldi ubalta hai, jaldi thanda hota hai." }
+          ]
+        },
+        {
+          "id": "aaji_morning",
+          "priority": 20,
+          "when": { "timeOfDay": "morning" },
+          "lines": [
+            { "speaker": "npc", "text": "Subah subah bazaar aaya? Achha kiya. Is waqt maal sabse taaza hota hai." },
+            { "speaker": "npc", "text": "Par dukandaar bhi taaze hote hain, aur ziddi bhi. Shaam ko sab thak jaate hain." }
+          ]
+        },
+        {
+          "id": "aaji_evening",
+          "priority": 20,
+          "when": { "timeOfDay": "evening" },
+          "lines": [
+            { "speaker": "npc", "text": "Shaam ho gayi. Ab dukaan band hone ka waqt hai." },
+            { "speaker": "npc", "text": "Is waqt dukandaar ko maal khatam karna hota hai. Achha mauka hai daam girane ka." }
+          ]
+        },
+        {
+          "id": "aaji_lowball_warning",
+          "priority": 15,
+          "when": { "minVisits": 3 },
+          "lines": [
+            { "speaker": "npc", "text": "Ek baat yaad rakh baala. Bahut kam daam bolega toh dukandaar ka mood bigdega." },
+            { "speaker": "npc", "text": "Aadha daam se shuru kar, bas. Usse neeche gaya toh woh tujhe gambhirta se nahi lega." }
+          ]
+        },
+        {
+          "id": "aaji_all_three",
+          "priority": 70,
+          "when": { "minBought": 3 },
+          "lines": [
+            { "speaker": "npc", "text": "Teeno dukaan se kharida? Arre wah!" },
+            { "speaker": "npc", "text": "₹{saved} bachaye? Mere pote ko bhi itni akal nahi hai. Tu toh asli Mumbaikar ban gaya." }
+          ]
+        },
+        {
+          "id": "aaji_family",
+          "priority": 5,
+          "when": { "minVisits": 4 },
+          "lines": [
+            { "speaker": "npc", "text": "Mera pota Pune mein software engineer hai. Online sab mangwata hai." },
+            { "speaker": "you", "text": "Online toh aasaan hai, Aaji." },
+            { "speaker": "npc", "text": "Aasaan hai, par wahan koi 'baala' bolke ek dhaniya free nahi deta." }
+          ]
+        }
+      ],
+      "returnGreetings": [
+        "Phir aa gaya, {player}?",
+        "Arre, tu phir se!",
+        "Haan baala, bol.",
+        "Kya re, thak gaya kya?",
+        "Aa, baith thodi der.",
+        "Tu toh roz ka ho gaya ab."
+      ],
+      "smallTalk": [
+        "Mere ghutne dukhte hain, par bazaar aana nahi chhodti.",
+        "Aajkal ke bachche bhindi aur tinda mein farak nahi jaante.",
+        "Pehle yahan ek bada peepal ka ped tha. Ab sirf dukaan hi dukaan.",
+        "Dhaniya kabhi khareedna mat, maang lena. Har dukandaar deta hai.",
+        "Tamatar laal aur thode sakht lena. Naram wale ghar tak pahunchte pahunchte sad jaate hain.",
+        "Mere zamaane mein ek rupaye mein poora thaila bhar jaata tha.",
+        "Aaj ka special {vod} hai. Wahan zara dhyaan se jaana.",
+        "Kabhi jaldi mein mol-bhaav mat kar. Jaldi wala hi haarta hai.",
+        "Main sirf dekhne aati hoon ab. Ghar pe koi baat karne wala nahi hai.",
+        "Pintu ki chai pee? Meethi bahut banata hai, par dil ka achha hai.",
+        "Bunty ko dekha kahin? Woh ladka poora din cricket khelta hai.",
+        "Kamat ko mat sun zyada. Woh har cheez ka hisaab lagata hai, maze ka nahi.",
+        "Baarish mein yahan ghutno tak paani bhar jaata hai. Tab sabse sasta maal milta hai.",
+        "Tu khaana banata hai ya sirf khareedta hai?",
+        "Muskura ke mol-bhaav kar. Gussa daam badhata hai.",
+        "Mera Ganpati ka prasad yahin ke gud se banta hai, har saal.",
+        "Mere pati bhi aise hi mol-bhaav karte the. Har baar haar jaate the.",
+        "Aaj dhoop tez hai. Paani pee le, baala."
+      ]
+    },
+    "kamat": {
+      "name": "Kamat Uncle",
+      "role": "Retired bank clerk who treats bargaining like maths",
+      "sprite": "npc_kamat",
+      "conversations": [
+        {
+          "id": "kamat_intro",
+          "priority": 100,
+          "when": { "maxVisits": 1 },
+          "lines": [
+            { "speaker": "npc", "text": "Excuse me. Aap naye ho? Main Kamat. Retired, Bank of Maharashtra, 34 saal." },
+            { "speaker": "npc", "text": "Ab mera ek hi shauk hai: mol-bhaav ka data collect karna." },
+            { "speaker": "you", "text": "Data? Bazaar mein?" },
+            { "speaker": "npc", "text": "Haan ji. Har dukandaar ka ek pattern hota hai. Samajh gaye toh jeet gaye." }
+          ]
+        },
+        {
+          "id": "kamat_opening_rule",
+          "priority": 50,
+          "when": { "minVisits": 2 },
+          "lines": [
+            { "speaker": "npc", "text": "Rule number one. Pehla offer hamesha pehle daam ka 55 se 65 percent." },
+            { "speaker": "npc", "text": "Usse kam bologe toh dukandaar ko lagega aap mazaak kar rahe ho. Patience seedha girta hai." },
+            { "speaker": "you", "text": "Aur zyada bolun toh?" },
+            { "speaker": "npc", "text": "Toh aapne paise pehle hi de diye. Bargaining shuru hone se pehle khatam." }
+          ]
+        },
+        {
+          "id": "kamat_reasons",
+          "priority": 45,
+          "when": { "minVisits": 2 },
+          "lines": [
+            { "speaker": "npc", "text": "Sirf number mat bolo. Number ke saath kaaran do." },
+            { "speaker": "npc", "text": "'Roz aaunga', 'dusri dukaan mein sasta hai', 'do bori lunga', 'student hoon'. Har kaaran pe daam 3 se 7 percent girta hai." },
+            { "speaker": "npc", "text": "Maine notebook mein likha hai. 212 observations." }
+          ]
+        },
+        {
+          "id": "kamat_walkaway",
+          "priority": 40,
+          "when": { "minVisits": 3 },
+          "lines": [
+            { "speaker": "npc", "text": "Walk away trick jaante ho?" },
+            { "speaker": "you", "text": "Chale jaane ka natak?" },
+            { "speaker": "npc", "text": "Bilkul. Teen mein se do baar dukandaar wapas bulata hai, 6 se 10 percent kam pe." },
+            { "speaker": "npc", "text": "Par sirf ek baar chalta hai. Aur agar uska sabr pehle hi kam ho, toh woh bulayega nahi. Jaane dega." }
+          ]
+        },
+        {
+          "id": "kamat_patience",
+          "priority": 35,
+          "when": { "minVisits": 3 },
+          "lines": [
+            { "speaker": "npc", "text": "Patience meter dekhte ho? Woh sabse important number hai." },
+            { "speaker": "npc", "text": "Gaali di, same number repeat kiya, faaltu baat ki: sab se girta hai. Taarif ki, toh thoda badhta hai." },
+            { "speaker": "npc", "text": "Zero hua toh aap bahar. Aur 30 second tak woh dukandaar aapse baat nahi karega." }
+          ]
+        },
+        {
+          "id": "kamat_score",
+          "priority": 30,
+          "when": { "boughtAny": true },
+          "lines": [
+            { "speaker": "npc", "text": "Aapne kuch khareeda. Score kaise banta hai, pata hai?" },
+            { "speaker": "npc", "text": "Har dukandaar ka ek secret minimum hota hai. Aap us minimum ke kitne paas pahunche, uske 100 points." },
+            { "speaker": "npc", "text": "Aur kam baaton mein deal ki toh 30 tak bonus. Jaldi aur sasta, dono chahiye." }
+          ]
+        },
+        {
+          "id": "kamat_leaderboard",
+          "priority": 25,
+          "when": { "minBought": 2 },
+          "lines": [
+            { "speaker": "npc", "text": "Leaderboard pe players ka total kaise banta hai? Har dukaan ka aapka best score, jod ke." },
+            { "speaker": "npc", "text": "Matlab ek hi dukaan se baar baar khareedne se kuch nahi hoga. Teeno dukaan pe achha karna padega." },
+            { "speaker": "you", "text": "Aapka score kitna hai, Uncle?" },
+            { "speaker": "npc", "text": "Main khelta nahi. Main sirf analyse karta hoon. Wahi toh asli maza hai." }
+          ]
+        },
+        {
+          "id": "kamat_salim",
+          "priority": 20,
+          "when": { "notBoughtFrom": "salim", "minVisits": 2 },
+          "lines": [
+            { "speaker": "npc", "text": "Salim ka data interesting hai. Uska sabr sabse kam hai. Sirf chhe-saat baatein." },
+            { "speaker": "npc", "text": "Wahan seedha, confident bolo. Machhi ki aankh, gills ki baat karo. Woh jaankaar grahak ki izzat karta hai." }
+          ]
+        },
+        {
+          "id": "kamat_vod",
+          "priority": 15,
+          "when": { "minVisits": 4 },
+          "lines": [
+            { "speaker": "npc", "text": "Aaj ka special {vod} hai, {vodShop}. Wahan chamakti roshni dekhi?" },
+            { "speaker": "npc", "text": "Special ka matlab sasta nahi. Special ka matlab sab wahan jaate hain. Competition zyada." }
+          ]
+        },
+        {
+          "id": "kamat_kicked",
+          "priority": 75,
+          "when": { "kickedOutBy": "salim" },
+          "lines": [
+            { "speaker": "npc", "text": "Salim ne nikaal diya? Main samajh gaya. Aapne time zyada liya." },
+            { "speaker": "npc", "text": "Observation number 213. Note kar liya." }
+          ]
+        }
+      ],
+      "returnGreetings": [
+        "Ah, {player}. Welcome back.",
+        "Phir se? Good. Consistency achhi cheez hai.",
+        "Aaiye aaiye. Notebook khuli hai.",
+        "Haan ji, boliye.",
+        "Aapka data bhi likh raha hoon, bura mat maaniye.",
+        "Oh, aap. Kaisa chal raha hai experiment?"
+      ],
+      "smallTalk": [
+        "Aaj tamatar ka average daam kal se 4 percent zyada hai. Baarish ka asar.",
+        "Mol-bhaav emotion nahi hai, maths hai. Par dukandaar ko yeh mat batana.",
+        "Bank mein 34 saal loan diye. Ab bazaar mein discount leta hoon. Circle poora.",
+        "Mere notebook mein har dukaan ka alag page hai.",
+        "Ek hi number do baar bolna sabse badi galti hai. Dukandaar chid jaata hai.",
+        "Aapne kabhi dekha, dukandaar gol number pe jaldi maanta hai? ₹500, ₹700. Psychology.",
+        "Retire hone ke baad sabse bada sawaal: poora din kya karun. Jawaab: yeh bazaar.",
+        "Online discount algorithm deta hai. Yahan insaan deta hai. Insaan ko samajhna mushkil hai.",
+        "Pintu ki chai ₹10 ki hai. Maine kabhi mol-bhaav nahi kiya. Kuch cheezon ka daam izzat hota hai.",
+        "Meri wife kehti hai main mol-bhaav mein zyada time lagata hoon. Data kehta hai woh sahi hai.",
+        "Kabhi bhi apna budget pehle mat batao.",
+        "Taarif karne se daam 0 se 3 percent girta hai. Kam hai, par free hai.",
+        "Main har Tuesday aata hoon. Tuesday ko bheed kam hoti hai.",
+        "Bunty ne mujhse ek baar mol-bhaav kiya, apni cricket ball ke liye. Main haar gaya.",
+        "Shaam ko dukandaar thake hote hain. Thaka dukandaar jaldi maanta hai.",
+        "Rukhsana Aapa se kabhi mol-bhaav mat karna. Woh machhi ki professor hai."
+      ]
+    },
+    "bunty": {
+      "name": "Bunty",
+      "role": "Twelve-year-old errand runner and cricket fanatic",
+      "sprite": "shopper_teal",
+      "conversations": [
+        {
+          "id": "bunty_intro",
+          "priority": 100,
+          "when": { "maxVisits": 1 },
+          "lines": [
+            { "speaker": "npc", "text": "Oye! Tum naye ho na? Main Bunty. Is bazaar ka asli malik." },
+            { "speaker": "you", "text": "Malik? Tum toh chhote ho." },
+            { "speaker": "npc", "text": "Umar chhoti hai, network bada hai. Sabka saaman main hi pahunchata hoon." },
+            { "speaker": "npc", "text": "Kuch chahiye toh bolna. Fees sirf ek Parle-G." }
+          ]
+        },
+        {
+          "id": "bunty_salim_secret",
+          "priority": 50,
+          "when": { "notBoughtFrom": "salim" },
+          "lines": [
+            { "speaker": "npc", "text": "Salim Bhai ke paas gaye? Woh har baar bolta hai 'subah 5 baje ki boat'." },
+            { "speaker": "npc", "text": "Main subah 5 baje wahan hota hoon. Aadhi machhi toh kal ki hoti hai. Hehe." },
+            { "speaker": "you", "text": "Sach mein?" },
+            { "speaker": "npc", "text": "Mat batana usko ki maine bola. Par tum 'boss' bol ke baat karo, woh khush ho jaata hai." }
+          ]
+        },
+        {
+          "id": "bunty_cricket",
+          "priority": 30,
+          "when": { "minVisits": 2 },
+          "lines": [
+            { "speaker": "npc", "text": "Tum cricket khelte ho?" },
+            { "speaker": "you", "text": "Thoda thoda." },
+            { "speaker": "npc", "text": "Main Mumbai ka next Sachin banunga. Ya kam se kam next Rohit." },
+            { "speaker": "npc", "text": "Pichhle hafte maine Ramesh Kaka ki dukaan pe six maara tha. Gobhi ne catch kar liya. Out." }
+          ]
+        },
+        {
+          "id": "bunty_dare",
+          "priority": 25,
+          "when": { "minVisits": 3, "boughtNone": true },
+          "lines": [
+            { "speaker": "npc", "text": "Tumne abhi tak kuch nahi khareeda? Darr lagta hai kya?" },
+            { "speaker": "npc", "text": "Challenge: Ramesh Kaka se 25 percent kam karwa ke dikhao. Maine ek baar 20 kiya tha." },
+            { "speaker": "you", "text": "Aur jeeta toh?" },
+            { "speaker": "npc", "text": "Toh main tumhe apna best trick bataunga. Promise." }
+          ]
+        },
+        {
+          "id": "bunty_trick",
+          "priority": 60,
+          "when": { "boughtFrom": "ramesh" },
+          "lines": [
+            { "speaker": "npc", "text": "Tumne Kaka se khareed liya! Theek hai, trick batata hoon." },
+            { "speaker": "npc", "text": "Pehle maal ki taarif karo. Phir bolo 'roz aaunga'. Phir number bolo. Teeno ek ke baad ek." },
+            { "speaker": "npc", "text": "Ulta kiya toh Kaka ki moonchh khadi ho jaati hai." }
+          ]
+        },
+        {
+          "id": "bunty_kicked",
+          "priority": 80,
+          "when": { "kickedOutBy": "pinky" },
+          "lines": [
+            { "speaker": "npc", "text": "Hahaha! Pinky Didi ne tumhe bhaga diya? Woh toh kisi ko nahi bhagaati!" },
+            { "speaker": "npc", "text": "Tumne kya bola? Bahut ghatiya offer diya hoga." }
+          ]
+        },
+        {
+          "id": "bunty_afternoon",
+          "priority": 15,
+          "when": { "timeOfDay": "afternoon" },
+          "lines": [
+            { "speaker": "npc", "text": "Dopahar mein sab dukandaar oonghte hain. Dekho Kaka ki aankh band ho rahi hai." },
+            { "speaker": "npc", "text": "Neend mein aadmi jaldi haan bol deta hai. Try karo." }
+          ]
+        },
+        {
+          "id": "bunty_school",
+          "priority": 10,
+          "when": { "minVisits": 4 },
+          "lines": [
+            { "speaker": "you", "text": "Tum school nahi jaate?" },
+            { "speaker": "npc", "text": "Jaata hoon na! Subah. Abhi toh extra class chal rahi hai. Bazaar class." },
+            { "speaker": "npc", "text": "Maths yahin seekhta hoon. Kamat Uncle se bhi tez hisaab hai mera." }
+          ]
+        },
+        {
+          "id": "bunty_champion",
+          "priority": 70,
+          "when": { "minBought": 3 },
+          "lines": [
+            { "speaker": "npc", "text": "Teeno dukaan? Tum toh legend ho!" },
+            { "speaker": "npc", "text": "Ab tum mere guru. Mujhe bhi sikhao. Main tumhe free mein Parle-G dunga." }
+          ]
+        }
+      ],
+      "returnGreetings": [
+        "Oye {player}!",
+        "Phir aa gaye? Kya haal?",
+        "Guru ji!",
+        "Arre, tum phir!",
+        "Kya bolte, boss?",
+        "Tum toh roz dikhte ho ab!"
+      ],
+      "smallTalk": [
+        "Mujhe koi ₹10 de do, vada pav khana hai.",
+        "Kamat Uncle ki notebook maine ek baar padhi. Sab numbers. Bore.",
+        "Pintu ki chai pee? Main usse free mein leta hoon. Setting hai.",
+        "Aaji mujhe roz ek gajar deti hai. Main use nahi batata ki mujhe gajar pasand nahi.",
+        "Kal match hai. Main bhi khelunga. Ball kharido mere liye?",
+        "Pinky Didi mujhe 'hero' bolti hai. Main sach mein hero hoon.",
+        "Yahan ek billi hai, uska naam Tiger hai. Machhi churaati hai Salim Bhai se.",
+        "Tumne gaaye dekhi? Woh bhi roz aati hai. Sabse bada grahak.",
+        "Aaj ka special {vod} hai. Main wahan se door rehta hoon. Bheed.",
+        "Mera sapna hai ek din poora bazaar khareed lunga.",
+        "Rukhsana Aapa se darr lagta hai. Woh ek baar mein samajh jaati hai kaun jhooth bol raha hai.",
+        "Mujhe local train mein bina seat ke khade rehna aata hai. Superpower.",
+        "Maine suna tumne ₹{saved} bachaye. Mujhe bhi share do.",
+        "Dopahar ko yahan cricket khelte hain. Tum aaoge?",
+        "Kaka ki dukaan ka tamatar main kabhi nahi churaata. Kabhi kabhi.",
+        "Mera bhai Dubai mein hai. Woh bolta hai wahan mol-bhaav nahi hota. Boring jagah hai."
+      ]
+    },
+    "rukhsana": {
+      "name": "Rukhsana Aapa",
+      "role": "Koli fisherwoman from the dock, knows every fish by its eyes",
+      "sprite": "npc_rukhsana",
+      "conversations": [
+        {
+          "id": "rukh_intro",
+          "priority": 100,
+          "when": { "maxVisits": 1 },
+          "lines": [
+            { "speaker": "npc", "text": "Tu naya hai. Chaal se pata chalta hai." },
+            { "speaker": "npc", "text": "Main Rukhsana. Mere abba, unke abba, sab isi samandar pe the." },
+            { "speaker": "you", "text": "Aap bhi machhi bechti ho?" },
+            { "speaker": "npc", "text": "Bechti thi. Ab sirf dekhti hoon kaun kisko kya bech raha hai. Aur hansti hoon." }
+          ]
+        },
+        {
+          "id": "rukh_fish_check",
+          "priority": 55,
+          "when": { "notBoughtFrom": "salim" },
+          "lines": [
+            { "speaker": "npc", "text": "Salim se machhi lene jaa raha hai? Pehle yeh seekh le." },
+            { "speaker": "npc", "text": "Aankh saaf aur chamakdaar honi chahiye. Dhundhli aankh matlab purani." },
+            { "speaker": "npc", "text": "Gills laal. Bhoori ho toh chhod de. Aur dabane pe maas wapas uthna chahiye." },
+            { "speaker": "npc", "text": "Salim ko yeh sab bolega toh woh samjhega tu jaanta hai. Phir daam girega." }
+          ]
+        },
+        {
+          "id": "rukh_salim_family",
+          "priority": 35,
+          "when": { "minVisits": 2 },
+          "lines": [
+            { "speaker": "npc", "text": "Salim mera bhateeja jaisa hai. Uska baap aur mere shohar ek hi boat pe the." },
+            { "speaker": "you", "text": "Toh aap uski side lengi?" },
+            { "speaker": "npc", "text": "Main machhi ki side leti hoon. Machhi jhooth nahi bolti. Log bolte hain." }
+          ]
+        },
+        {
+          "id": "rukh_after_salim",
+          "priority": 60,
+          "when": { "boughtFrom": "salim" },
+          "lines": [
+            { "speaker": "npc", "text": "Pomfret le li? Dikha zara." },
+            { "speaker": "npc", "text": "Hmm, theek hai. Tawa fry kar, halka masala, kokum ke saath. Zyada masala daala toh machhi rooth jayegi." },
+            { "speaker": "you", "text": "Machhi rooth jayegi?" },
+            { "speaker": "npc", "text": "Haan. Swaad chala jayega. Wahi rootna hai." }
+          ]
+        },
+        {
+          "id": "rukh_evening",
+          "priority": 25,
+          "when": { "timeOfDay": "evening" },
+          "lines": [
+            { "speaker": "npc", "text": "Shaam ho gayi. Ab Salim ko machhi khatam karni hai, warna barf ka kharcha." },
+            { "speaker": "npc", "text": "Is waqt mol-bhaav karega toh woh jaldi maanega. Samandar ka niyam hai." }
+          ]
+        },
+        {
+          "id": "rukh_monsoon",
+          "priority": 15,
+          "when": { "minVisits": 3 },
+          "lines": [
+            { "speaker": "npc", "text": "Monsoon mein boat nahi jaati. Do mahine." },
+            { "speaker": "npc", "text": "Us waqt jo machhi milti hai, woh ya toh sookhi hai ya jhooth. Yaad rakhna." }
+          ]
+        },
+        {
+          "id": "rukh_kicked",
+          "priority": 80,
+          "when": { "kickedOutBy": "salim" },
+          "lines": [
+            { "speaker": "npc", "text": "Salim ne bhaga diya tujhe? Main dekh rahi thi." },
+            { "speaker": "npc", "text": "Tu bahut der tak ek hi baat bol raha tha. Machhi wala jaldi mein rehta hai. Seedha bol, jaldi bol." }
+          ]
+        },
+        {
+          "id": "rukh_koli",
+          "priority": 10,
+          "when": { "minVisits": 4 },
+          "lines": [
+            { "speaker": "npc", "text": "Tujhe pata hai, yeh shehar humara tha pehle? Koli log. Mumba Devi humari devi hai." },
+            { "speaker": "npc", "text": "Ab building bahut hain, samandar kam dikhta hai. Par samandar kahin nahi gaya. Woh intezaar kar raha hai." }
+          ]
+        },
+        {
+          "id": "rukh_vod_salim",
+          "priority": 45,
+          "when": { "vendorOfDay": "salim" },
+          "lines": [
+            { "speaker": "npc", "text": "Aaj Salim special hai. Sab wahan ja rahe hain." },
+            { "speaker": "npc", "text": "Bheed mein woh daam kam nahi karta. Thoda ruk, bheed hatne de." }
+          ]
+        }
+      ],
+      "returnGreetings": [
+        "Phir aaya?",
+        "Haan, {player}. Bol.",
+        "Samandar ki hawa achhi lagi tujhe?",
+        "Aa gaya. Baith.",
+        "Kya dekh raha hai?",
+        "Tu toh roz ka ho gaya."
+      ],
+      "smallTalk": [
+        "Bombil ko Bombay duck kehte hain. Na woh duck hai, na ab shehar Bombay.",
+        "Surmai sabse mehngi hoti hai. Par swaad pomfret ka hi hai.",
+        "Samandar ka mood aur dukandaar ka mood, dono ek jaise badalte hain.",
+        "Machhi ko kabhi barf mein zyada der mat rakhna. Swaad marta hai.",
+        "Mere haath dekh. Pachaas saal ka namak hai inme.",
+        "Is dock pe subah char baje sabse zyada shor hota hai. Ab dekh, kitna shaant.",
+        "Tiger billi ko dekha? Woh sabse chaalaak grahak hai. Kabhi paise nahi deti.",
+        "Kokum aur machhi, jaise chai aur baarish.",
+        "Jo zyada kasam khaata hai, woh zyada jhooth bolta hai. Bazaar ka niyam.",
+        "Boat pe bhi mol-bhaav hota hai. Wahan asli khel hai.",
+        "Aaj lehrein oonchi hain. Kal machhi kam aayegi. Daam badhenge.",
+        "Kamat mujhse poochta hai machhi ka daam kyun badalta hai. Main kehti hoon, samandar se pooch.",
+        "Tune ₹{saved} bachaye? Ek machhi aur le leta.",
+        "Mera beta boat nahi chalata. Uber chalata hai. Waqt badal gaya.",
+        "Pinky ki masala mix achhi hai machhi ke liye. Usse pooch lena."
+      ]
+    },
+    "pintu": {
+      "name": "Pintu Chaiwala",
+      "role": "Walks the market with a kettle, knows every rumour",
+      "sprite": "shopper_red",
+      "conversations": [
+        {
+          "id": "pintu_intro",
+          "priority": 100,
+          "when": { "maxVisits": 1 },
+          "lines": [
+            { "speaker": "npc", "text": "Chaaaai! Garam chai! Oh, naya grahak!" },
+            { "speaker": "npc", "text": "Pintu naam hai. Chai ₹10, gossip free." },
+            { "speaker": "you", "text": "Gossip kaisa?" },
+            { "speaker": "npc", "text": "Kaun kisse naraz hai, kaun aaj sasta de raha hai, kaun ki biwi ne daanta. Sab Pintu jaanta hai." }
+          ]
+        },
+        {
+          "id": "pintu_vod",
+          "priority": 55,
+          "when": { "minVisits": 2 },
+          "lines": [
+            { "speaker": "npc", "text": "Breaking news! Aaj ka special {vod}, {vodShop} pe." },
+            { "speaker": "npc", "text": "Wahan peela chamakta hai, dekha? Log wahi jaate hain. Tu bhi jaa, par dimaag lagake." }
+          ]
+        },
+        {
+          "id": "pintu_ramesh_mood",
+          "priority": 40,
+          "when": { "notBoughtFrom": "ramesh", "minVisits": 2 },
+          "lines": [
+            { "speaker": "npc", "text": "Ramesh Kaka ka mood aaj theek hai. Subah maine unko adrak wali chai di." },
+            { "speaker": "npc", "text": "Adrak wali chai ke baad woh 5 percent zyada dayalu ho jaate hain. Scientific fact." },
+            { "speaker": "you", "text": "Kamat Uncle ne yeh likha hai?" },
+            { "speaker": "npc", "text": "Kamat Uncle ne mujhse hi seekha hai!" }
+          ]
+        },
+        {
+          "id": "pintu_pinky_gossip",
+          "priority": 35,
+          "when": { "minVisits": 3 },
+          "lines": [
+            { "speaker": "npc", "text": "Ek baat bataun? Pinky Didi aur Salim Bhai mein jhagda hai." },
+            { "speaker": "you", "text": "Kyun?" },
+            { "speaker": "npc", "text": "Salim ne bola uski machhi ke saath Pinky ka masala free milna chahiye. Pinky ne bola 'free mein toh sirf muskaan milti hai'." },
+            { "speaker": "npc", "text": "Tab se dono ek doosre ko dekh ke 'hmph' karte hain." }
+          ]
+        },
+        {
+          "id": "pintu_after_any",
+          "priority": 50,
+          "when": { "boughtAny": true },
+          "lines": [
+            { "speaker": "npc", "text": "Suna tune {bought} khareeda! Poore bazaar mein khabar hai." },
+            { "speaker": "npc", "text": "Deal ke baad chai toh banti hai. Aaj pehli meri taraf se." }
+          ]
+        },
+        {
+          "id": "pintu_kicked",
+          "priority": 80,
+          "when": { "kickedOutBy": "pinky" },
+          "lines": [
+            { "speaker": "npc", "text": "Pinky Didi naraz? Arre baap re. Yeh khabar toh chai se bhi garam hai!" },
+            { "speaker": "npc", "text": "Aadha minute ruk. Phir jaa ke taarif kar, uska gussa pighal jaayega." }
+          ]
+        },
+        {
+          "id": "pintu_night",
+          "priority": 20,
+          "when": { "timeOfDay": "night" },
+          "lines": [
+            { "speaker": "npc", "text": "Itni raat ko bazaar? Tu bhi mere jaisa hai, neend nahi aati." },
+            { "speaker": "npc", "text": "Raat ko sab dukandaar ghar jaane ki jaldi mein hote hain. Sasta milega, try kar." }
+          ]
+        },
+        {
+          "id": "pintu_trains",
+          "priority": 10,
+          "when": { "minVisits": 4 },
+          "lines": [
+            { "speaker": "npc", "text": "Tu kaunsi local leta hai? Western, Central, Harbour?" },
+            { "speaker": "you", "text": "Jo pehle aaye." },
+            { "speaker": "npc", "text": "Sahi jawaab. Asli Mumbaikar." }
+          ]
+        },
+        {
+          "id": "pintu_dream",
+          "priority": 5,
+          "when": { "minVisits": 5 },
+          "lines": [
+            { "speaker": "npc", "text": "Mera sapna hai apna chai cafe kholna. Naam hoga 'Pintu's Chai Lounge'." },
+            { "speaker": "npc", "text": "Wahan bhi ₹10 ki chai. Bas kursi hogi. Aur WiFi." }
+          ]
+        }
+      ],
+      "returnGreetings": [
+        "Chaaai! Oh, {player}!",
+        "Aa gaya mera regular!",
+        "Ek cutting?",
+        "Kya khabar hai, boss?",
+        "Phir se? Chai ki talab lagi?",
+        "Arre, tu! Suna kya hua?"
+      ],
+      "smallTalk": [
+        "Chai mein adrak zyada, cheeni kam. Yeh Mumbai ka niyam hai. Main todta hoon.",
+        "Aaj Bunty ne teen cutting pee. Paise? Kal dega. Hamesha kal.",
+        "Aaji kehti hai meri chai meethi hai. Phir bhi do pee jaati hai.",
+        "Kamat Uncle ne meri chai ka 'cost analysis' kiya. Bola main loss mein hoon. Sahi bola.",
+        "Baarish mein chai ka business double. Bhagwan baarish de.",
+        "Rukhsana Aapa ko chai nahi, kaali coffee chahiye. Main unke liye alag banata hoon.",
+        "Kal ek angrez aaya tha. 'Masala tea' bola. Maine ₹50 liya. Mazaak tha, ₹10 wapas kiye.",
+        "Salim Bhai chai ke saath bhi mol-bhaav karta hai. ₹10 ki chai ₹8 mein. Har din.",
+        "Tu ₹{saved} bachake ghoom raha hai aur ₹10 ki chai nahi le raha?",
+        "Mera kettle 12 saal purana hai. Isse zyada vafadaar koi nahi.",
+        "Suna hai kal inspection hai. Sab dukandaar apna board saaf kar rahe hain.",
+        "Pinky Didi aaj naya dupatta pehen ke aayi hai. Kisi ko mat batana maine notice kiya.",
+        "Gaaye ne aaj Kaka ka ek gobhi kha liya. Kaka ne kuch nahi bola. Gaaye se kaun ladta hai.",
+        "Cutting chai ka matlab aadhi chai. Aadha daam nahi. Log confuse hote hain.",
+        "Mumbai mein do cheez kabhi nahi rukti: local train aur Pintu ki chai.",
+        "Aaj ka special {vod}. Main wahan chai double daam pe bechunga. Mazaak!"
+      ]
+    }
+  }
+}
