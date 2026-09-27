@@ -5,7 +5,7 @@
 Built for **AGENTHON 2026** (12-hour AI + Games Hackathon, 27 September 2026).
 
 🌐 **Live demo:** [https://fasla-mat.onrender.com](https://fasla-mat.onrender.com)
-🎥 **Demo video:** [add link]
+🎥 **Demo video:** [https://youtu.be/6PMkERpLz38]
 
 > The free Render instance sleeps when idle. The first load can take 30 to 50 seconds.
 
@@ -205,15 +205,3 @@ Notes:
 - Multiplayer: two shoppers competing for the same item
 - Persistent sessions (Redis) for multi-instance hosting
 
-## 👥 Team
-
-| Name | Role |
-|---|---|
-| Soham [surname] | [role] |
-| [Teammate 2] | [role] |
-| [Teammate 3] | [role] |
-| [Teammate 4] | [role] |
-
-## 📜 Credits
-
-See [CREDITS.md](CREDITS.md). Market tileset by Zabin, Jetrel, Redshrike, Hyptosis, Daneeklu, and Bertram (LPC). Characters: *Market Day Folk* by Obssidian Art. Fonts: Pixelify Sans and Hind (SIL OFL).
